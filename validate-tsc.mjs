@@ -1,12 +1,9 @@
-import { exec } from 'node:child_process';
+import { execSync } from 'node:child_process'
 
-exec('tsc --noEmit', (error, stdout, stderr) => {
-  if (error) {
-    console.error(`❌ Error: ${error.message}`);
-    process.exit(1);
-  }
-  if (stderr) {
-    console.error(`⚠️ stderr: ${stderr}`);
-  }
-  console.log(`✅ stdout:\n${stdout}`);
-});
+try {
+  const output = execSync('tsc --noEmit', { stdio: 'inherit' })
+  console.log('✅ TypeScript check passed')
+} catch (error) {
+  console.error('❌ TypeScript errors found')
+  process.exit(1)
+}
