@@ -1,22 +1,47 @@
 {
-  "name": "tablet",
+  "name": "mobile",
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "prepare": "husky",
+    "tsc-watch": "tsc-watch --onSuccess \"echo Compilation Succeeded\" --onFailure \"echo Compilation Failed\"",
+    "validate-tsc": "node validate-tsc.mjs",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run validate-tsc"
+    ]
   },
   "dependencies": {
+    "@expo-google-fonts/inter": "^0.4.0",
+    "@react-native-async-storage/async-storage": "^2.1.2",
+    "@react-native-masked-view/masked-view": "^0.3.2",
+    "@react-navigation/native": "^7.1.9",
+    "@react-navigation/native-stack": "^7.3.13",
+    "@types/axios": "^0.14.4",
+    "axios": "^1.9.0",
     "expo": "~53.0.9",
+    "expo-splash-screen": "^0.30.8",
     "expo-status-bar": "~2.2.3",
     "react": "19.0.0",
-    "react-native": "0.79.2"
+    "react-native": "0.79.2",
+    "react-native-gesture-handler": "^2.25.0",
+    "react-native-reanimated": "^3.18.0",
+    "react-native-safe-area-context": "^5.4.1",
+    "react-native-screens": "^4.11.1",
+    "styled-components": "^6.1.18"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~19.0.10",
+    "@types/styled-components-react-native": "^5.2.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.0",
     "typescript": "~5.8.3"
   },
   "private": true
