@@ -38,8 +38,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@rocketseat/eslint-config": "^2.2.2",
     "@types/react": "~19.0.10",
     "@types/styled-components-react-native": "^5.2.5",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.0",
     "typescript": "~5.8.3"

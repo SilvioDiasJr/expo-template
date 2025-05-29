@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react'
 
-import { Container, Title } from "./styles"
+import { Container, Title } from './styles'
 
 export const Home: React.FC = () => {
   return (
     <Container>
-      <Title>Hello world!</Title>
+      <Title>Hello world! </Title>
     </Container>
   )
 }

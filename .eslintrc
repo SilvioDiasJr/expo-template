@@ -1,0 +1,19 @@
+{
+  "extends": "@rocketseat/eslint-config/react",
+
+  "rules": {
+    "react-hooks/exhaustive-deps": "off",
+    "no-unused-expressions": "off",
+    "eqeqeq": "off",
+    "array-callback-return": "off",
+    "@typescript-eslint/no-unus": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/camelcase": "off",
+    "camelcase": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-require-imports": "off",
+    "@typescript-eslint/no-unused-expressions": "off",
+  },
+}
