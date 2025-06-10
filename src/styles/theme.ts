@@ -7,7 +7,9 @@ export const rem = (value: number) => {
 }
 
 export const theme = {
-  COLORS: {},
+  COLORS: {
+    red: '#FF0000',
+  },
   FONT_SIZE: {
     xs: rem(1.2), // 12px
     sm: rem(1.4), // 14px
